@@ -1,0 +1,24 @@
+.container {
+    display:grid;
+    /* grid-template-columns: repeat(16,18px); */
+    background-color:#FAFAFA;
+    border: 1px solid red;
+}
+
+.cell {
+    border: 1px solid black;
+    height:100%;
+    width:100%;
+    min-height: 18px;
+    min-width: 18px;
+    opacity: 100%;
+}
+
+.cell:hover {
+    background-color:#ebd7d7;
+}
+
+.hovered {
+    background-color:black;
+    opacity:10%;
+}
