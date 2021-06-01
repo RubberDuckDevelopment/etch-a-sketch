@@ -10,6 +10,7 @@ function generateGrid(columnCount=16){
     }
 
     const container = document.querySelector(".container")
+    //format the grid
     while (container.firstChild){
         container.removeChild(container.firstChild)
     }
@@ -17,7 +18,7 @@ function generateGrid(columnCount=16){
     container.style.gridTemplateColumns=`repeat(${columns},1fr)`
 
 
-
+    //generate the cells per column
     for (let i =0;i<columns*columns;i++){
 
         const cell = document.createElement('div')
@@ -32,11 +33,18 @@ function generateGrid(columnCount=16){
     }
 }
 
+function getColorPicked(){
+    const colorPicker = document.getElementById("colorpicker")
+
+    return colorPicker.value
+}
+
+
 function handleHover(e){
     const target = document.getElementById(e.target.id)
     target.className += " hovered"
 
-    console.log(target.style.opacity)
+    target.style.backgroundColor = getColorPicked()
 
     let targetOpacity=0;
     if (target.style.opacity ===""){
@@ -45,7 +53,6 @@ function handleHover(e){
     else {
         targetOpacity=parseFloat(target.style.opacity) + 0.1
     }
-    console.log(targetOpacity)
     target.style.opacity = targetOpacity
 
 }

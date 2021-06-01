@@ -6,10 +6,16 @@
     </head>
 
     <body>
-        <label for="columns">How many columns?</label>
-        <input type="number" id="columns"  max="30">
-        <button onClick="generateGrid()">Create Grid</button>
-        <button onClick="resetGrid()">Reset Grid</button>
+        <h1>Etch-a-Sketch
+        </h1>
+            <label for="columns">How many columns?</label>
+            <input type="number" id="columns"  max="30">
+            <label for="colorpicker">What color?</label>
+            <input type="color" id="colorpicker" value="#69A8D9">
+            <button onClick="generateGrid()">Create Grid</button>
+            <button onClick="resetGrid()">Reset Grid</button>
+        <form name="form-selections">
+        </form>
         <hr>
         <div class="container">
         </div>
